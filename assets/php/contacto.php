@@ -5,7 +5,7 @@
 
 require("class.phpmailer.php");
 require("class.smtp.php");
-
+/*
 // Valores enviados desde el formulario
 if ( !isset($_POST["name"]) || !isset($_POST["email"]) || !isset($_POST["message"]) || !isset($_POST["subject"]) ) {
     die ("Es necesario completar todos los datos del formulario");
@@ -55,3 +55,4 @@ if($estadoEnvio){
     header ('Location: ../../index.html');
     echo "<h4>Ocurrió un error inesperado!</h4>";
 }
+*/
