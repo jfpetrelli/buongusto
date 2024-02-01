@@ -55,5 +55,4 @@ if($estadoEnvio){
     header ('Location: ../../index.html');
     echo "<h4>Ocurrió un error inesperado!</h4>";
 }
-
 */
