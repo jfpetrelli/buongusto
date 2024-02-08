@@ -521,11 +521,7 @@ section {
 /*--------------------------------------------------------------
   # About 
   --------------------------------------------------------------*/
-.about-boxes {
-  background: url("../img/about-boxes-bg.jpg") center top no-repeat fixed;
-  background-size: cover;
-  padding: 60px 0 30px 0;
-  position: relative; }
+
 
 .about-boxes::before {
   content: "";
@@ -541,35 +537,26 @@ section {
   position: relative;
   z-index: 10; }
 
-.about-boxes .card {
-  border-radius: 3px;
+.card {
   border: 0;
-  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
   margin-bottom: 30px; }
+.card-card{
+  border-radius: 20px;
+  border: 1px solid #ddd;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  transition: 1s ease;
+}
 
-.about-boxes .card-icon i {
-  font-size: 32px;
-  color: #fff;
-  width: 64px;
-  height: 64px;
-  padding-top: 5px;
-  text-align: center;
-  background-color: #419621;
-  border-radius: 4px;
-  text-align: center;
-  border: 4px solid #fff;
-  transition: 0.3s;
-  display: inline-block; }
-
-.about-boxes .card-body {
+ .card-body {
   padding-top: 12px;
  }
 
-.about-boxes .card-title {
+ .card-title {
   font-weight: 700;
   text-align: center; }
 
-.about-boxes .card-title a {
+ .card-title a {
   color: #15222b; }
 
 
@@ -577,10 +564,8 @@ section {
   color: #5e5e5e; }
 
 
-.card:hover{
-  zoom: 102%;
-  background-color: rgb(212, 208, 208);
-  
+.card-card:hover{
+  transform: translateY(-10px);
 }  
 
 
@@ -591,22 +576,32 @@ section {
 /*----------------------- Productos ---------------------- */
 .divSectionProductos{
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   gap: 25px;
+  height: 90vh;
+  margin-top: -20px;
+}
+.divSectionProductos span:first-child{
+  display: flex;
+  justify-content: flex-end;
 }
 .divProductos{
   border-radius: 20px;
   border: 1px solid #fff;
   background: #fff;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 80vh;
+  flex-direction: row;
+  height: 40vh;
+  width: 50%;
   box-shadow: 1px 1px 5px rgba(110, 109, 109, 0.5);
+  transition: 1s ease;
 }
 .figureDivProductos{
-  width: 60%;
-  height: 50%;
+  width: 40%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 .figureDivProductos img{
   width: 100%;
@@ -618,13 +613,16 @@ section {
   margin-bottom: 20px;
 }
 .divInfoProductos{
-  height: 40%;
-  transform: translateY(20%);
-  text-align: center;
-  padding: 20px;
+  width: 60%;
+  padding: 10px;
 }
 .divInfoProductos p{
-  font-size: 1.3em;
+  text-align: center;
+  font-size: 1.2em;
+  margin-top: 10%;
+}
+.divProductos:hover{
+  transform: translateY(-10px);
 }
 
 /*--------------------------------------------------------------
@@ -811,59 +809,91 @@ section {
   # Footer
   --------------------------------------------------------------*/
 #footer {
-  background: #121d24;
-  padding: 0 0 30px 0;
-  color: #fff;
-  font-size: 14px; }
-  #footer .footer-top {
-    background: #15222b;
-    border-bottom: 1px solid #1d303c;
-    padding: 60px 0 30px 0; }
-    #footer .footer-top .footer-info {
-      margin-bottom: 30px; }
-      #footer .footer-top .footer-info h3 {
-        font-size: 28px;
-        margin: 0 0 15px 0;
-        padding: 2px 0 2px 0;
-        line-height: 1;
-        font-weight: 700; }
-      #footer .footer-top .footer-info p {
-        font-size: 14px;
-        line-height: 24px;
-        margin-bottom: 0;
-        font-family: "Raleway", sans-serif;
-        color: #fff; }
-    #footer .footer-top .social-links a {
-      font-size: 18px;
-      display: inline-block;
-      background: rgba(255, 255, 255, 0.08);
-      color: #fff;
-      line-height: 1;
-      padding: 8px 0;
-      margin-right: 4px;
-      border-radius: 4px;
-      text-align: center;
-      width: 36px;
-      height: 36px;
-      transition: 0.3s; }
-    #footer .footer-top .social-links :hover {
-      background: #419621;
-      color: #fff;
-      text-decoration: none; }
+background: #121d24;
+height: 40vh;
+color: #fff;
+font-size: 14px;
+padding: 60px 0 30px 0;
+border-bottom: 1px solid #1d303c;
+}
+.footer-info {
+margin-bottom: 30px;
+}
+.footer-info{
+display: flex;
+flex-direction: row;
+justify-content: center;
+width: 100%;
+height: 100%;
+}
+.footer-span{
+width: 33%;
+height: 100%;
+display: grid;
+place-content: center;
+}
+.footerSpan1{
+}
+.footerSpan2{
 
-      .a-footer{
-        text-align: center;
-      }
-      .a-footer img{
-        width: 50%;
-        height: 50%;
-        object-fit: cover;
-      }
+}
+.footerSpan3{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+#footer .footer-info h3 {
+font-size: 28px;
+margin: 0 0 15px 0;
+padding: 2px 0 2px 0;
+line-height: 1;
+font-weight: 700;
+}
+#footer .footer-info p {
+font-size: 14px;
+line-height: 24px;
+margin-bottom: 0;
+font-family: "Raleway", sans-serif;
+color: #fff;
+}
+#footer .social-links a {
+font-size: 18px;
+display: inline-block;
+background: rgba(156, 148, 148, 0.08);
+color: #fff;
+line-height: 1;
+padding: 8px 0;
+margin-right: 4px;
+border-radius: 4px;
+text-align: center;
+width: 36px;
+height: 36px;
+transition: 0.3s;
+}
+#footer .social-links :hover {
+background: #419621;
+color: #fff;
+text-decoration: none;
+}
+.a-footer{
+width: 100%;
+height: 100%;
 
-      .icon-small {
-        width: 1.5em; 
-        height: 1.5em;
-        vertical-align: text-bottom;
-        margin-right: 0.5em; 
-      }
+}
+.figure-footer{
+  width: 70%;
+  height: 70%;
+
+}
+.logo-footer{
+width: 100%;
+height: 100%;
+
+}
+.icon-small {
+width: 1.5em; 
+height: 1.5em;
+vertical-align: text-bottom;
+margin-right: 0.5em; 
+}
       
