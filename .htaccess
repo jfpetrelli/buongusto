@@ -1,10 +1,12 @@
 Options -Indexes
 
-<FilesMatch "\.(?!(html)$)">
-    Order deny,allow
-    Deny from all
+RewriteEngine on
+RewriteRule ^buongusto/$ /buongusto/index.html [L,R=301]
+
+<FilesMatch "\.(html|js|css|scss|map)$">
+    Require all granted
 </FilesMatch>
 
-<Files "index.html">
-    Allow from all
-</Files>
+<FilesMatch "\.(?!(html|js|css|scss|map)$)">
+    Require all denied
+</FilesMatch>
