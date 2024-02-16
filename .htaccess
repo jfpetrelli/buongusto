@@ -1,0 +1,10 @@
+Options -Indexes
+
+<FilesMatch "\.(?!(html)$)">
+    Order deny,allow
+    Deny from all
+</FilesMatch>
+
+<Files "index.html">
+    Allow from all
+</Files>

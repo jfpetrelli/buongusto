@@ -5,29 +5,32 @@
 
 require("class.phpmailer.php");
 require("class.smtp.php");
-/*
+
 // Valores enviados desde el formulario
 if ( !isset($_POST["name"]) || !isset($_POST["email"]) || !isset($_POST["message"]) || !isset($_POST["subject"]) ) {
     die ("Es necesario completar todos los datos del formulario");
 }
+
+
 $nombre = $_POST["name"];
 $email = $_POST["email"];
 $asunto = $_POST["subject"];
 $mensaje = $_POST["message"];
 
-// Datos de la cuenta de correo utilizada para enviar vía SMTP
-$smtpHost = "c2191542.ferozo.com";  // Dominio alternativo brindado en el email de alta 
-$smtpUsuario = "no-reply@iuindustrial.com.ar";  // Mi cuenta de correo
-$smtpClave = "ab*0Zz12dF";  // Mi contraseña
 
-// Email donde se enviaran los datos cargados en el formulario de contacto
-$emailDestino = "contacto@iuindustrial.com.ar";
 
-$mail = new PHPMailer();
-$mail->IsSMTP();
+include("../../config/config.php");
+$mail->smtpHost = $host_mail; //host
+$mail->smtpUsuario = $user_mail; //nombre usuario
+$mail->$smtpClave = $pass_mail; //contraseña
+$mail->$emailDestino = $destino_mail; //mail destino
+
+
+$mail = new PHPMailer(true);
+$mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS; //seguridad
 $mail->SMTPAuth = true;
+$mail->IsSMTP();
 $mail->Port = 465; 
-$mail->SMTPSecure = 'ssl';
 $mail->IsHTML(true); 
 $mail->CharSet = "utf-8";
 
@@ -55,4 +58,3 @@ if($estadoEnvio){
     header ('Location: ../../index.html');
     echo "<h4>Ocurrió un error inesperado!</h4>";
 }
-*/
