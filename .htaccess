@@ -1,0 +1,8 @@
+Options -Indexes
+
+RewriteEngine on
+RewriteRule ^buongusto/$ /buongusto/index.html [L,R=301]
+
+<FilesMatch "\.(php)$">
+    Require all denied
+</FilesMatch>
