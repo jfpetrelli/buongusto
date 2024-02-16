@@ -1,12 +1,8 @@
-#Options -Indexes
-#
-#RewriteEngine on
-#RewriteRule ^buongusto/$ /buongusto/index.html [L,R=301]
-#
-#<FilesMatch "\.(html|js|css|scss|map|jpeg|png|svg|jpg)$">
-#    Require all granted
-#</FilesMatch>
-#
-#<FilesMatch "\.(?!(html|js|css|scss|map|jpeg|png|svg|jpg)$)">
-#    Require all denied
-#</FilesMatch>
+Options -Indexes
+
+RewriteEngine on
+RewriteRule ^buongusto/$ /buongusto/index.html [L,R=301]
+
+<FilesMatch "\.(php)$">
+    Require all denied
+</FilesMatch>
