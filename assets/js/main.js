@@ -170,6 +170,7 @@
     selector: '.glightbox'
   });
 
+  
   /**
    * Testimonials slider
    */
