@@ -42,7 +42,7 @@
 
       <h1 class="logo">
           <a href="index.html">
-              <img src="assets/img/LOGO_sin_fondo_header.png" alt="" srcset="" style="width: 75px;">
+              <img src="assets/img/Logo BUON GUSTO sin fondo.png" alt="" srcset="" style="width: 75px;">
           </a>
       </h1>
 
@@ -65,7 +65,7 @@
     <div class="hero-container" data-aos="fade-up" data-aos-delay="150">
       
       <div class="container">
-        <img src="assets/img/Logo BUON GUSTO sin fondo.png" alt="IU" style="width:80%" class="mx-auto d-block">
+        <img src="assets/img/Logo BUON GUSTO sin fondo.png" alt="IU" style="width:60%" class="mx-auto d-block">
       </div>
       
     </div>
@@ -104,11 +104,11 @@
     <!-- ======= Seccion de fotos -  valores ======= -->
     <section id="about-boxes" class="about-boxes">
       <div class="container" data-aos="fade-up">
-        <div class="row justify-content-center" style="gap:20px;">
+        <div class="row" style="gap:20px;">
 
-          <div class="card" style="width: 38rem; max-width: 100%; " data-aos="fade-up" data-aos-delay="80">
+          <div class="card" style="width: 35rem; max-width: 100%; " data-aos="fade-up" data-aos-delay="80">
             <div class="card-card">
-                <div class="card-img-top" style="width: 100%; height: 400px; display: flex; align-items: center; justify-content: center;" >
+                <div class="card-img-top" style="width: 100%; height: 300px; display: flex; align-items: center; justify-content: center;" >
                   <figure style="width: 80%; height: 80%;">
                     <img src="assets/img/COSECHA LENTEJA.jpeg"  style="width: 100%; height: 100%; object-fit: cover;" alt="...">
                   </figure>
@@ -123,9 +123,9 @@
             </div>
         </div>
         
-        <div class="card" style="width: 38rem; max-width: 100%;" data-aos="fade-up" data-aos-delay="80">
+        <div class="card" style="width: 35rem; max-width: 100%;" data-aos="fade-up" data-aos-delay="80">
             <div class="card-card">
-              <div class="card-img-top" style="width: 100%; height: 400px; display: flex; align-items: center; justify-content: center;">
+              <div class="card-img-top" style="width: 100%; height: 300px; display: flex; align-items: center; justify-content: center;">
                  <figure style="width: 80%; height: 80%;" >
                     <img src="assets/img/LENTEJA.jpeg" style="width: 100%; height: 100%; object-fit: cover;"  alt="...">
                  </figure>  
@@ -147,7 +147,7 @@
     </section>
 
     <!-- ======= Nuestros Productos ======= -->
-    <section id="productos" class="services section-bg">
+   <section id="productos" class="services section-bg">
       <div class="container" data-aos="fade-up">
         <div class="section-title">
           <h2>Nuestros Productos</h2>
@@ -159,26 +159,35 @@
 
             <div class="card_card">   
               <div class="container_card container_card1">
-                <figure class="figure_img figure_img1">
-                  <img src="assets/img/Maiz pisingallo BuonGusto.jpeg" alt="">
-                </figure>
-               </div>
-               <div class="div_titulo">
-                <h4>Maiz pisingallo por 400gr</h4>
-              </div>
-            </div>
-      
-            <div class="card_card">
-              <div class="container_card">
-                  <figure class="figure_img figure_img2">
-                    <img src="assets/img/Lenteja BuonGusto.jpeg" alt="">
+                  <figure class="figure_img figure_img1" onclick="openModal('myModal')">
+                      <img src="assets/img/Maiz pisingallo BuonGusto.jpeg" alt="">
                   </figure>
-               </div>
-               <div class="div_titulo">
-                <h4>Lenteja por 400gr</h4>
               </div>
-            </div>
-
+              <div class="div_titulo">
+                  <h4>Maiz pisingallo por 400gr</h4>
+              </div>
+          </div>
+          <!------- modal imagen 1 ----->
+          <div id="myModal" class="modal">
+              <span class="close" onclick="closeModal('myModal')">&times;</span>
+              <img class="modal-content" id="modalImage" src="assets/img/Maiz pisingallo BuonGusto.jpeg" alt="">
+          </div>
+          
+          <div class="card_card">
+              <div class="container_card">
+                  <figure class="figure_img figure_img2" onclick="openModal('myModal2')">
+                      <img src="assets/img/Lenteja BuonGusto.jpeg" alt="">
+                  </figure>
+              </div>
+              <div class="div_titulo">
+                  <h4>Lenteja por 400gr</h4>
+              </div>
+          </div>
+          <!------- modal imagen 2 ----->
+          <div id="myModal2" class="modal">
+              <span class="close" onclick="closeModal('myModal2')">&times;</span>
+              <img class="modal-content" id="modalImage2" src="assets/img/Lenteja BuonGusto.jpeg" alt="">
+          </div>
           </div>
 
       </div>
@@ -278,7 +287,7 @@
               <span class="footer-span footerSpan1">
                 <a href="index.html" class="a-footer"> 
                   <figure class="figure-footer">
-                    <img src="assets/img/LOGO_sin_fondo_header.png" alt="" srcset="" class="logo-footer">
+                    <img src="assets/img/solo logo.png" alt="" srcset="" class="logo-footer">
                   </figure>
                 </a>
               </span>

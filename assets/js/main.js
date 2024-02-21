@@ -225,7 +225,6 @@
     }
 
   });
-
   /**
    * Initiate portfolio lightbox 
    */
@@ -263,3 +262,22 @@
   });
 
 })()
+// Función para abrir el modal
+function openModal(modalId) {
+  const modal = document.getElementById(modalId);
+  modal.style.display = "block";
+}
+
+// Función para cerrar el modal
+function closeModal(modalId) {
+  const modal = document.getElementById(modalId);
+  modal.style.display = "none";
+}
+
+// Cierra el modal si el usuario hace clic fuera de la imagen
+window.onclick = function(event) {
+  if (event.target.classList.contains('modal')) {
+      closeModal('myModal');
+      closeModal('myModal2');
+  }
+};
