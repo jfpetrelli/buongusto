@@ -579,26 +579,23 @@ section {
   align-items: center;
   justify-content: center;
   gap: 15px;
-  height: 80vh;
-  margin-top: -20px;
+  height: 70vh;
+  margin: auto;
   width: 100%;
 }
-.pruebas_card{
-  width: 100%;
-  height: 90vh;
-  display: flex;
-  justify-content: center;
-}
+
 .card_productos{
-  width: 80%;
+  width: 100%;
   height: 100%;
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
 }
 .card_card{
-  flex: 1;
-  height: 100%;
+  width: 48%;
+  height: 95%;
   margin: 2px;
   display: flex;
   flex-direction: column;
@@ -606,7 +603,6 @@ section {
   align-items: center;
   flex-wrap: nowrap;
   border: 1px solid #ddd;
-
   box-shadow: 1px 1px 5px rgba(110, 109, 109, 0.5);
   margin: 10px;
   transition: 1s ease;
@@ -616,16 +612,15 @@ section {
 }
 
 .container_card{
-  width: 80%;
-  height: 80%;
+  width: 100%;
+  height: 75%;
   flex-basis: 200;
   display: flex;
   flex-direction: column;
   align-items: center;
   background: #fff;
   margin: 10px;
-  border: 1px solid #ddd;
- 
+  border: 1px solid #ddd; 
 }
 
 .figure_img{
@@ -640,7 +635,7 @@ section {
 }
 
 .div_titulo{
-  flex: 1;
+  height: 15%;
   display: grid;
   place-content: center;
   padding: 0;
@@ -663,11 +658,11 @@ section {
 }
 
 .modal-content {
-  top: 20px;
+  top: 120px;
   margin: auto;
   display: block;
   max-width: 40%;
-  max-height: 90%;
+  max-height: 80%;
 }
 
 .close {
@@ -996,7 +991,7 @@ margin-right: 0.5em;
   }
   .card_card {
     width: 40%;
-    height: 20%;
+    height: 40%;
     padding-top:0 ;
   }
   .container_card {
