@@ -662,7 +662,7 @@ section {
   top: 220px;
   margin: auto;
   display: block;
-  max-width: 40%; /*  Ancho */
+  max-width: 20%; /*  Ancho */
   max-height: 50%; /* Alto */
   z-index: 3001; /* Ajustado el z-index a un valor mayor que el contenedor */
 
@@ -996,6 +996,10 @@ margin-right: 0.5em;
   }
   .div_titulo h4{
     text-align: center;
+  }
+  .modal-content {
+    max-width: 50%; /*  Ancho */
+    max-height: 50%; /* alto*/
   }
   #footer{
     height: 45vh;
