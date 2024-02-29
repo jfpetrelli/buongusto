@@ -662,8 +662,8 @@ section {
   top: 120px;
   margin: auto;
   display: block;
-  max-width: 40%;
-  max-height: 80%;
+  max-width: 20%;
+  max-height: 50%;
 }
 
 .close {
