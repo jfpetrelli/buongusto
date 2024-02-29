@@ -645,11 +645,11 @@ section {
   color: #15222b;
 }
 /* modal */
+
 /* Estilos para el modal */
 .modal {
   display: none;
-  position: fixed;
-  z-index: 1;
+  z-index: 3000; /* Ajustado el z-index a un valor mayor */
   left: 0;
   top: 0;
   width: 100%;
@@ -657,13 +657,15 @@ section {
   overflow: auto;
   background-color: rgba(0,0,0,0.9);
 }
-
+/* Aca controlas el tamaño de la imagen del modal */
 .modal-content {
-  top: 120px;
+  top: 220px;
   margin: auto;
   display: block;
-  max-width: 20%;
-  max-height: 50%;
+  max-width: 40%; /*  Ancho */
+  max-height: 50%; /* Alto */
+  z-index: 3001; /* Ajustado el z-index a un valor mayor que el contenedor */
+
 }
 
 .close {
@@ -965,6 +967,9 @@ margin-right: 0.5em;
   }
 }
 @media (max-width: 768px) {
+  .h3_nosotros{
+    text-align: center;
+  }
   .divSectionProductos{
     flex: 1;
   }
@@ -1015,6 +1020,7 @@ margin-right: 0.5em;
       width: 70%;
       height: 78%;
       margin: auto;
+      text-align: center;
     }
     .logo-footer{
     width: 100%;
