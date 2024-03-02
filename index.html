@@ -243,7 +243,7 @@
           </div>
 
           <div class="col-lg-6 mt-4 mt-lg-0">
-            <form action="assets/php/contacto.php" method="post" role="form" class="php-email-form">
+            <form id= "formulario-contacto" action="assets/php/contacto.php" method="post" role="form" class="php-email-form">
               <div class="row">
                 <div class="col-md-6 form-group">
                   <input type="text" name="name" class="form-control" id="name" placeholder="Nombre" required>
@@ -322,6 +322,28 @@
   <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="assets/js/main.js"></script>
 
+
+  <script>
+    // Función para obtener el parámetro de la URL
+    function obtenerParametroUrl(nombre) {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(nombre);
+    }
+
+    // Mostrar mensaje según el parámetro de la URL
+    document.addEventListener('DOMContentLoaded', function() {
+        const mensaje = obtenerParametroUrl('mensaje');
+        if (mensaje === 'exito') {
+            alert('El mensaje se envió correctamente.');
+        } else if (mensaje === 'error') {
+            alert('Ocurrió un error al enviar el mensaje.');
+        }
+    });
+  </script>
+
+
 </body>
+
+
 
 </html>

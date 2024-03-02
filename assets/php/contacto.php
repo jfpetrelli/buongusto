@@ -1,38 +1,51 @@
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Recoger los datos del formulario
-    $nombre = $_POST['name'];
-    $email = $_POST['email'];
-    $motivo = $_POST['subject'];
-    $mensaje = $_POST['message'];
+/**
+ * @version 1.0
+ */
 
-    // Dirección de correo a la que se enviará el formulario
-    $destinatario = "jfpetrelli@gmail.com"; // Cambiar por el correo de destino
+require("class.phpmailer.php");
+require("class.smtp.php");
 
-    // Asunto del correo
-    $asunto = "Mensaje de formulario de contacto";
+// Valores enviados desde el formulario
+if ($_SERVER['REQUEST_METHOD'] != 'POST') {
+    header('Location: ../../index.html');
+}
 
-    // Construye el cuerpo del mensaje
-    $cuerpoMensaje = "Nombre: $nombre\n";
-    $cuerpoMensaje .= "Email: $email\n";
-    $cuerpoMensaje .= "Motivo: $motivo\n";
-    $cuerpoMensaje .= "Mensaje:\n$mensaje";
+if (!isset($_POST["name"]) || !isset($_POST["email"]) || !isset($_POST["message"]) || !isset($_POST["subject"])) {
+    die("Es necesario completar todos los datos del formulario");
+}
 
-    // Encabezados del correo
-    $headers = "From: $email" . "\r\n" .
-               "Reply-To: $email" . "\r\n" .
-               "X-Mailer: PHP/" . phpversion();
+$nombre = $_POST["name"];
+$emailA = $_POST["email"];
+$asunto = $_POST["subject"];
+$mensaje = $_POST["message"];
 
-    // Envía el correo
-    if (mail($destinatario, $asunto, $cuerpoMensaje, $headers)) {
- //       header ('Location: ../../index.html');
-        echo "<h4>El correo fue enviado correctamente!</h4>";
-    } else {
-//        header ('Location: ../../index.html');
-        echo "<h4>El correo fue enviado correctamente!</h4>";
-    }
-} else {
-        header ('Location: ../../index.html');
+include("../../config/config.php");
 
-    }
+$mail = new PHPMailer(true);
+$mail->isSMTP();
+$mail->Host = $smtpHost;
+$mail->SMTPAuth = true;
+$mail->Username = $smtpUsuario;
+$mail->Password = $smtpClave;
+$mail->SMTPSecure = 'ssl'; // Utiliza SSL para cifrado
+$mail->Port = 465;
+$mail->CharSet = "utf-8";
+
+$mail->setFrom($emailA, '"' . $nombre . '" <' . $emailA . '>');
+$mail->addAddress($emailDestino);
+
+$mail->isHTML(true);
+$mail->Subject = "Mail desde la web: \n" . $asunto;
+$mail->Body = nl2br($mensaje);
+
+try {
+    $mail->send();
+    header('Location: ../../index.html?mensaje=exito');
+    exit;
+} catch (Exception $e) {
+    header('Location: ../../index.html?mensaje=error');
+    exit;
+}
+?>
 ?>
