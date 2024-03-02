@@ -305,7 +305,7 @@
               </span>
               <span class="footer-span footerSpan3">
                   <p>Ituzaingo 846, Alvarez. Santa Fe</p>
-                  <a href="envasadosbuongusto@gmail.com">envasadosbuongusto@gmail.com</a>
+                  <a href="mailto:envasadosbuongusto@gmail.com">envasadosbuongusto@gmail.com</a>
               </span>
             </div>
 
@@ -338,6 +338,13 @@
         } else if (mensaje === 'error') {
             alert('Ocurrió un error al enviar el mensaje.');
         }
+
+        // Recargar la página solo si hay un mensaje para mostrar
+        if (mensaje === 'exito' || mensaje === 'error') {
+          window.location.href = 'index.html';
+        }
+
+
     });
   </script>
 
