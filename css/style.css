@@ -991,9 +991,7 @@ margin-right: 0.5em;
   .div_titulo h4{
     font-size: .9em;
   }
-  .div_titulo_responsive{
-    
-  }
+ 
   .div_titulo h4{
     text-align: center;
   }
@@ -1017,6 +1015,12 @@ margin-right: 0.5em;
     width: 100%;
     justify-content: center;
     align-items: center;
+  }
+  .footerSpan2{
+    justify-content: center;
+  }
+  .social-links {
+    transform: translateX(3px);
   }
   .a-footer{
     width: 100%;
