@@ -1,5 +1,5 @@
 <?php
-    
+
 //BASE DE DATOS LOCAL        
 $dbhost = "xxxxxxx";
 $dbuser = "xxxxx";
@@ -12,5 +12,4 @@ $smtpClave = "opgc ncwy wjej gqrx";
 $smtpHost = "smtp.gmail.com";
 //$emailDestino = "jfpetrelli@gmail.com";
 $emailDestino = "envasadosbuongusto@gmail.com";
-
 ?>
