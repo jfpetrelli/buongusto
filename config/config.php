@@ -11,6 +11,6 @@ $smtpUsuario = "webbuongusto@gmail.com";
 $smtpClave = "opgc ncwy wjej gqrx";
 $smtpHost = "smtp.gmail.com";
 //$emailDestino = "jfpetrelli@gmail.com";
-$emailDestino = "jfpetrelli@gmail.com";
+$emailDestino = "envasadosbuongusto@gmail.com";
 
 ?>
