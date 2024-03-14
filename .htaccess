@@ -10,3 +10,10 @@ RewriteRule ^(.*)$ /buongusto/index.html [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*)$ /$1/index.html [L]
+
+# Permitir acceso a los robots de los motores de búsqueda
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{HTTP_USER_AGENT} (googlebot|bingbot|slurp) [NC]
+    RewriteRule .* - [L]
+</IfModule>
