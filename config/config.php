@@ -6,11 +6,11 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST') {
 }
 
 //DATOS MAIL  (Reemplazar por mail origen)
-$smtpHost = "c2152291.ferozo.com";
-$smtpUsuario = "webbuongusto@buongusto.com.ar";
-$smtpClave = "Q210@saqmw1s01";
-$emailDestino = "envasadosbuongusto@gmail.com";
+$smtpHost = "xxxxxxxxxxxx";
+$smtpUsuario = "xxxxxxxxxxxxxxxxxxx";
+$smtpClave = "xxxxxxxxxxx";
+$emailDestino = "xxxxxxxxxxxxxxxxx";
 $smtpAuth = true;
-$smtpSecure = 'ssl';
-$smtpPort = 465;
+$smtpSecure = 'xxx';
+$smtpPort = 000;
 ?>
