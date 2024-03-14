@@ -41,7 +41,7 @@
   <div class="container d-flex align-items-center justify-content-between">
 
       <h1 class="logo">
-          <a href="index.html">
+          <a href="/">
               <img src="assets/img/Logo BUON GUSTO sin fondo.png" alt="" srcset="" style="width: 75px;">
           </a>
       </h1>
@@ -284,7 +284,7 @@
 
               <!------ Logo ---->
               <span class="footer-span footerSpan1">
-                <a href="index.html" class="a-footer"> 
+                <a href="/" class="a-footer"> 
                   <figure class="figure-footer">
                     <img src="assets/img/solo logo.png" alt="" srcset="" class="logo-footer">
                   </figure>
@@ -312,8 +312,9 @@
   </footer>
   <!--BOTON A HOME-->
   <div id="preloader"></div>
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
-      class="bi bi-arrow-up-short"></i></a>
+<!-- Enlace para volver arriba sin agregar nada a la URL ni recargar la página -->
+<a href="javascript:void(0)" id="back-to-top-link" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/aos/aos.js"></script>
@@ -323,30 +324,6 @@
   <script src="assets/js/main.js"></script>
 
 
-  <script>
-    // Función para obtener el parámetro de la URL
-    function obtenerParametroUrl(nombre) {
-        const urlParams = new URLSearchParams(window.location.search);
-        return urlParams.get(nombre);
-    }
-
-    // Mostrar mensaje según el parámetro de la URL
-    document.addEventListener('DOMContentLoaded', function() {
-        const mensaje = obtenerParametroUrl('mensaje');
-        if (mensaje === 'exito') {
-            alert('El mensaje se envió correctamente.');
-        } else if (mensaje === 'error') {
-            alert('Ocurrió un error al enviar el mensaje.');
-        }
-
-        // Recargar la página solo si hay un mensaje para mostrar
-        if (mensaje === 'exito' || mensaje === 'error') {
-          window.location.href = 'index.html';
-        }
-
-
-    });
-  </script>
 
 
 </body>

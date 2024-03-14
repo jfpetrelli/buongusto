@@ -1,8 +1,12 @@
 Options -Indexes
-
 RewriteEngine on
-RewriteRule ^buongusto/$ /buongusto/index.html [L,R=301]
 
-#<FilesMatch "\.(php)$">
-#   Require all denied
-#</FilesMatch>
+# Redirigir solicitudes directas a /buongusto/ a /buongusto/index.html
+RewriteCond %{REQUEST_URI} ^/buongusto/$
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ /buongusto/index.html [L]
+
+# Redirigir cualquier otra solicitud a index.html si el archivo no existe
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ /$1/index.html [L]

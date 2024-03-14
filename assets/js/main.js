@@ -280,4 +280,64 @@ window.onclick = function(event) {
       closeModal('myModal');
       closeModal('myModal2');
   }
+
+  
 };
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  const form = document.getElementById("formulario-contacto");
+
+  form.addEventListener("submit", function(event) {
+      event.preventDefault(); // Evita el envío del formulario por defecto
+
+      // Crea un objeto FormData para enviar los datos del formulario
+      const formData = new FormData(form);
+
+      // Realiza la solicitud POST al script PHP
+      fetch('assets/php/contacto.php', {
+          method: 'POST',
+          body: formData
+      })
+      .then(response => response.text())
+      .then(data => {
+          console.log('Respuesta del servidor:', data); // Para depuración
+          if (data.trim() === 'exito') {
+              alert('El mensaje se envió correctamente.');
+              form.reset(); // Borra los datos del formulario
+          } else {
+              alert('Hubo un error al enviar el mensaje.');
+          }
+      })
+      .catch(error => {
+          console.error('Error al enviar formulario:', error);
+      });
+  });
+});
+
+
+
+
+  if (window.location.pathname === "/index.html") {
+    setTimeout(function() {
+        window.location.replace("/");
+    }); 
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    const backToTopLink = document.getElementById('back-to-top-link');
+
+    // Agrega un evento clic al enlace
+    backToTopLink.addEventListener('click', function(event) {
+        event.preventDefault(); // Prevenir el comportamiento por defecto
+
+        // Desplázate suavemente hacia arriba
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+});
+
+
+
