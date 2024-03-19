@@ -1010,7 +1010,7 @@ margin-right: 0.5em;
     flex-direction: column;
     align-items: center;
     margin-bottom: 0;
-  }
+  } 
   .footer-span{
     width: 100%;
     justify-content: center;
@@ -1030,7 +1030,7 @@ margin-right: 0.5em;
     }
     .figure-footer{
       width: 70%;
-      height: 78%;
+      height: 80%;
       margin: auto;
       text-align: center;
     }
